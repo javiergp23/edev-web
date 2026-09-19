@@ -1,7 +1,3 @@
 export const JobCard = () => {
-    return(
-        <>
-            
-        </>
-    )
-}
+  return <>JobCards</>;
+};

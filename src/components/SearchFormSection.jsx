@@ -1,5 +1,5 @@
-export function SearchFormSection(){
-  return(
+export function SearchFormSection() {
+  return (
     <form action="">
       <select name="location" id="filter-location">
         <option value="">Ubicacion</option>
@@ -35,5 +35,5 @@ export function SearchFormSection(){
         <option value="santiago">Santiago</option>
       </select>
     </form>
-  )
+  );
 }
