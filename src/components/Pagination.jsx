@@ -13,6 +13,13 @@ export function Pagination({ currentPage, totalPages, onPageChange}) {
     }
   }
 
+  const handleNextClick = (e, page) =>{
+    e.preventDefault();
+    if(page !== currentPage){
+      onPageChange(currentPage + 1);
+    }
+  }
+
   return (
     <nav className="pagination">
       
@@ -41,7 +48,7 @@ export function Pagination({ currentPage, totalPages, onPageChange}) {
       ))}
 
       
-        <a href="" style={{ styleNextBtn }}>
+        <a href="" style={{ styleNextBtn }} onClick={handleNextClick}>
           <svg
             width="16"
             height="16"
