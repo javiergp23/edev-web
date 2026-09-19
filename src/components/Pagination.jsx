@@ -7,13 +7,16 @@ export function Pagination({ currentPage, totalPages, onPageChange}) {
   const styleNextBtn = isLastPage ? "is-disabled" : "";
 
   const handlePrevClick = (e) => {
-    
+    e.preventDefault();
+    if(!isFirstPage) {
+      onPageChange(currentPage - 1);
+    }
   }
 
   return (
     <nav className="pagination">
       
-        <a style={{ stylePrveBtn }} href="">
+        <button style={{ stylePrveBtn }} href="" onClick={handlePrevClick}>
           <svg
             width="16"
             height="16"
@@ -28,7 +31,7 @@ export function Pagination({ currentPage, totalPages, onPageChange}) {
             <path stroke="none" d="M0 0h24v24h0z" fill="none" />
             <path d="M15 6l-6 6l6 6" />
           </svg>
-        </a>
+        </button>
     
 
       {pages.map((page) => (
