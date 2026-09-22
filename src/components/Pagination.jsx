@@ -22,7 +22,7 @@ export function Pagination({ currentPage, totalPages, onPageChange }) {
 
   return (
     <nav className="pagination">
-      <button style={{ stylePrveBtn }} href="" onClick={handlePrevClick}>
+      <button style={{stylePrveBtn}} href="" onClick={handlePrevClick}>
         <svg
           width="16"
           height="16"
